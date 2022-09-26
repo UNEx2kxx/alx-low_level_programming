@@ -8,18 +8,15 @@
  * Return: pointer to `dest`
  */
 
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	char *mine;
+	unsigned int i;
 
-	mine = dest;
-	while (n > 0)
+	for (i = 0; n > 0 ; i++, n--)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		n--;
+		dest[i] = src[i];
 	}
 
-	return (yolo);
+	return (dest);
 }
